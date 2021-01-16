@@ -19,8 +19,13 @@ repositories {
 }
 
 jar{
+	manifest {
+        attributes(
+                'Main-Class': 'com.simple.devops.DevopsApplication'
+        )
+    }
     enabled = true
-    baseName = "springproject2"
+    baseName = "j3-eCommerce"
     version = "0.0.1-SNAPSHOT"
 }
 
