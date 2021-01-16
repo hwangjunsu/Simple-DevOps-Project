@@ -18,15 +18,11 @@ repositories {
 	mavenCentral()
 }
 
-jar{
-	manifest {
-        attributes(
-                'Main-Class': 'com.simple.devops.DevopsApplication'
-        )
-    }
-    enabled = true
-    baseName = "j3-eCommerce"
-    version = "0.0.1-SNAPSHOT"
+bootJar {
+	enabled = true
+	archiveFileName = 'j3.jar'
+	archiveVersion="0.0.1"
+//	mainClassName = "com.simple.devops.DevopsApplication"
 }
 
 dependencies {
@@ -34,6 +30,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
