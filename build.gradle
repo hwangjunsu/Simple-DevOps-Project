@@ -18,6 +18,12 @@ repositories {
 	mavenCentral()
 }
 
+jar{
+    enabled = true
+    baseName = "springproject2"
+    version = "0.0.1-SNAPSHOT"
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
